@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -13,7 +14,7 @@ import com.proyecto.springboot.form.model.User;
 import com.proyecto.springboot.form.repository.UserRepository;
 import com.proyecto.springboot.form.serviceImpl.UserServiceImpl;
 
-@Controller
+@RestController
 public class TestController {
 	
 	@Autowired
@@ -32,6 +33,19 @@ public class TestController {
 		repo.save(u);
 		
 		return "Hello";
+		
+	}
+	
+	@RequestMapping(value = "/post", method = RequestMethod.POST)
+	public @ResponseBody String createfromJson(@RequestBody User u) {
+		if (u == null) {
+			return "fallo";
+		}
+		else {
+			this.repo.save(u);
+			return "Nombre: "+ u.getName() + " Apellido: "+u.getLastname()+" Email: "+u.getEmail()+
+					" Age: "+u.getAge()+" Password: "+u.getPassword()+" id: "+u.getId();			
+		}
 		
 	}
 	
