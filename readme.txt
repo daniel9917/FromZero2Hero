@@ -22,4 +22,14 @@ Goals for next commit.
 Optional:
 -Produce JSON.
 ---------------------------------------------------------------------------------------------------------------
+16/04/21:
+Achievement:
+-Created whole Spring Rest Functional Crud Model for entity Rol.
+
+Goals for next commit.
+-Establish table relation so that everytime a new user is created a Role is assigned to the User.
+
+Optional:
+-Produce JSON.
+---------------------------------------------------------------------------------------------------------------
 

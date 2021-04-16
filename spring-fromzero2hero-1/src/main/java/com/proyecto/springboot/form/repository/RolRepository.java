@@ -3,11 +3,9 @@ package com.proyecto.springboot.form.repository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.proyecto.springboot.form.model.User;
+import com.proyecto.springboot.form.model.Rol;
 
 @Repository
-public interface UserRepository extends CrudRepository<User, Long>{
-	
-	
+public interface RolRepository extends CrudRepository<Rol, Long>{	
 
 }
