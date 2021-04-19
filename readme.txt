@@ -32,4 +32,16 @@ Goals for next commit.
 Optional:
 -Produce JSON.
 ---------------------------------------------------------------------------------------------------------------
+19/04/21:
+Achievement:
+-Stablished one to one relation betwen model tables.
+
+BUG TO FIX:
+-When registering a row the id column from User id is REPLACED by the FK role_id as if it was the PK.
+
+
+Optional:
+-Produce JSON.
+---------------------------------------------------------------------------------------------------------------
+
 
